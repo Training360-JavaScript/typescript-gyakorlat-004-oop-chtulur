@@ -3,9 +3,9 @@
  * Ez egy minta, így néz ki egy interface.
  */
 export interface IHero {
-    id: number;
-    name: string;
-    photo?: string;
+  id: number;
+  name: string;
+  photo?: string;
 }
 
 /**
@@ -15,9 +15,13 @@ export interface IHero {
  * Deklaráld benne a következő változókat:
  * @var {string} sex
  * @var {number} age
- * @var {number} health 
+ * @var {number} health
  */
-export interface IHuman {}
+export interface IHuman extends IHero {
+  sex: string;
+  age: number;
+  health: number;
+}
 
 /**
  * Hozz létre és exportálj ki egy új interfészt!
@@ -26,7 +30,10 @@ export interface IHuman {}
  * Deklaráld benne a következő változókat:
  * @var {number} wings
  * @var {number} wheels
- * @var {string} clan 
+ * @var {string} clan
  */
-export interface ITransformer {}
-
+export interface ITransformer extends IHero {
+  wings: number;
+  wheels: number;
+  clan: string;
+}
